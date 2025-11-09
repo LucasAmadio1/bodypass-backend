@@ -8,6 +8,7 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
+import { appRoutes } from './http/controllers/routes'
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -33,3 +34,5 @@ app.register(fastifySwagger, {
 app.register(ScalarApiReference, {
   routePrefix: '/docs',
 })
+
+app.register(appRoutes)
