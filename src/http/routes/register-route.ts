@@ -10,7 +10,7 @@ export const registerRoute: FastifyPluginAsyncZod = async (app) => {
     '/register',
     {
       schema: {
-        summary: 'Create User',
+        summary: 'Create a user',
         tags: ['Users'],
         body: registerBodySchema,
         response: registerResponseSchema,

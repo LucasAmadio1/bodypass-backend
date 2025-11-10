@@ -1,9 +1,9 @@
-import type { FastifyReply, FastifyRequest } from 'fastify'
+import type { RegisterRequest } from '../schemas/register-schema'
 import { registerUseCase } from '@/use-cases/register-use-case'
-import type { RegisterBody } from '../schemas/register-schema'
+import type { FastifyReply, FastifyRequest } from 'fastify'
 
 export async function registerController(
-  request: FastifyRequest<{ Body: RegisterBody }>,
+  request: FastifyRequest<{ Body: RegisterRequest }>,
   reply: FastifyReply,
 ) {
   const { email, name, password } = request.body

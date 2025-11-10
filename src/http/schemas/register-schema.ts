@@ -16,4 +16,4 @@ export const registerResponseSchema = {
   }),
 }
 
-export type RegisterBody = z.infer<typeof registerBodySchema>
+export type RegisterRequest = z.infer<typeof registerBodySchema>
